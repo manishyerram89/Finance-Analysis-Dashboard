@@ -1,104 +1,123 @@
 # Finance Analytics Dashboard
 
-This Looker dashboard provides a complete financial performance overview using LookML-powered explores, interactive filters, and drillable visualizations. It analyzes key financial metrics such as sales, profit, cost, pricing, product performance, country-level contribution, promotions, and time‑based trends. The dashboard enables finance teams to explore aggregated and granular insights efficiently using Looker’s semantic modeling layer.
+This Looker dashboard provides a comprehensive financial analysis across sales, profit, cost, pricing, promotions, and product performance. Looker’s semantic model and interactive dashboard filters allow users to explore financial KPIs, analyze trends, and drill into country-level and product-level profitability.
 
 ---
 
 ## 📌 Overview
 
-This dashboard leverages **LookML explores, measures, and dimensions** to generate a unified financial analytics view. Users can filter by **Region** and drill into product lines, promotions, and categories to understand financial drivers.
+The dashboard presents a unified financial view with the following top-level metrics:
 
-Key metrics modeled in LookML include:
-- **Total Sales:** $55.4M  
-- **Total Profit:** $31.6M  
-- **Sales Cost:** $23.8M  
-- **Unit Cost:** $1.9M  
-- **Price:** $4.4M  
-- **Number of Products:** 1.6K  
+- **Total Sales:** 55.4M  
+- **Total Profit:** 31.6M  
+- **Sales Cost:** 23.8M  
+- **Unit Cost:** 1.9M  
+- **Price:** 4.4M  
+- **Products:** 1.6K  
 
-These KPIs are calculated using LookML measures and surfaced as dashboard tiles.
+These values are generated using Looker’s aggregated metrics via the underlying explore.
+
+A **Region filter** allows users to segment financial insights geographically.
 
 ---
 
-## 📊 Dashboard Sections & Looker-Specific Insights
+## 📊 Dashboard Sections & Insights
 
-### **1. KPI Tiles (LookML Measures)**
-The top section uses Looker single-value tiles powered by:
-- Aggregated LookML measures  
-- Conditional formatting  
-- Region-level dashboard filters  
+### **1. KPI Tiles**
+The top tiles use Looker’s *single value visualizations* to summarize:
+- Sales  
+- Profit  
+- Sales Cost  
+- Unit Cost  
+- Price  
+- Product Count  
 
-These provide instant visibility into financial performance.
+These metrics adjust dynamically based on selected filters.
 
 ---
 
 ### **2. Profit by Country**
-A horizontal bar visualization built using:
-- Country dimension  
-- Profit measure  
-- Sorting & pagination  
-
-Allows drill-down into specific geographies through Looker drill paths.
+A horizontal bar chart showing profit distribution across multiple countries.  
+Users can:
+- Compare country performance  
+- Drill into specific regions  
+- Understand geographic profitability spread  
 
 ---
 
 ### **3. Profit by Product Category**
-A tile based on LookML explores that include:
-- Product category dimension  
-- Profit measure  
+Displays profit split across categories such as:
+- Computers  
+- Cameras & Camcorders  
+- TV & Video  
+- Cell Phones  
+- Audio  
 
-Useful for identifying top-performing product groups.
+Useful for strategic product analysis.
 
 ---
 
 ### **4. Profit by Product Sub-Category**
-A deeper explore showing:
-- Product sub-category dimension  
-- Profit measure  
-
-Supports drill-down to SKU-level data when configured in LookML.
+Breaks down category performance into more specific subcategories (e.g., laptops, smartphones, projectors).  
+This helps identify the most profitable product groups at a granular level.
 
 ---
 
 ### **5. Promotion-Level Profitability**
-This tile uses:
-- Promotion name dimension  
-- Profit measure  
-- Looker pivoting to compare promotions  
+Shows revenue and profitability by promotional campaign, including:
+- Holiday promotions  
+- Seasonal promotions  
+- Back-to-school promotions  
+- Region-specific campaigns  
+- No-discount scenarios  
 
-Shows which promotional campaigns contribute the most revenue.
+Helps evaluate promotion effectiveness.
 
 ---
 
-### **6. Monthly Sales & Profit Trend**
-A multi-series line+bar chart using:
-- Month dimension group  
-- Profit and Sales measures  
+### **6. Sales & Profit – Monthly Trend**
+A combined bar + line chart visualizing:
+- Monthly profit (bars)  
+- Monthly sales (line)  
 
-Reveals seasonal trends and misalignment between sales and profitability.
+Reveals:
+- Seasonality in demand  
+- Profit–sales alignment  
+- Month-over-month fluctuations  
 
 ---
 
 ### **7. Quarterly Cost Analysis**
-A bar chart comparing:
-- Unit Cost measure  
-- Cost of Sales measure  
+A quarterly chart comparing:
+- Unit Cost  
+- Cost of Sales  
 
-Modeled in LookML to support quarter-based time grouping.
+This helps identify:
+- Cost spikes  
+- Efficiency gains  
+- Year-over-year trends  
+
+Covers quarters from **Q4 2021 through Q3 2024**.
 
 ---
 
 ## 🛠 Tools & Technologies Used
-- **Looker (Google Cloud Looker)**  
-- **LookML Models** (explores, views, measures, dimensions)  
-- **Dashboard Tiles** (single-value, bar, line, combo charts)  
-- **Dashboard Filters** (Region, Product, Category)  
-- **SQL Runner** (optional for validation)  
-- Financial dataset connected via Looker’s database model  
+- **Looker Dashboard (Google Cloud Looker)**  
+- Looker Explores (for querying aggregated metrics)  
+- Dashboard Filters (Region, Product Group, etc.)  
+- Looker Visualizations:
+  - Single Value Tiles  
+  - Bar Charts  
+  - Line & Combo Charts  
+  - Trend Visualizations  
+- Connected SQL Warehouse powering the explore  
+
+> No custom LookML files are required — the dashboard uses existing explores in Looker.
 
 ---
 
 ## 📁 Recommended Repository Structure
+
 ```
 Finance-Analytics-Looker-Dashboard/
 │
@@ -107,27 +126,26 @@ Finance-Analytics-Looker-Dashboard/
 │     └── Sales.xlsx
 └── preview/
       ├── Finance_Analytics_Dashboard.png
-
 ```
 
 ---
 
 ## 📸 Dashboard Preview
+
 ```
-![Dashboard Preview](screenshots/finance_dashboard.png)
+![Finance Dashboard](screenshots/finance_dashboard.png)
 ```
 
 ---
 
 ## 🚀 How to Use
 1. Open the dashboard in Looker.  
-2. Apply filters (Region/Product) to explore metrics.  
-3. Drill into visualizations to view row‑level data.  
-4. Inspect LookML definitions for measures and dimensions.  
-5. Export insights via Looker schedules or CSV exports.
+2. Adjust filters such as **Region** to refine financial insights.  
+3. Hover, drill down, or view underlying data for deeper exploration.  
+4. Export dashboards or schedule data delivery if needed.  
 
 ---
 
 ## 🎯 Summary
-This Looker Finance Analytics Dashboard delivers a complete financial intelligence layer powered by LookML. By combining KPIs, product-level profitability, promotional analysis, and time‑based cost evaluation, it provides a powerful foundation for data-driven financial planning and strategic decision‑making.
 
+This Finance Analytics Dashboard offers a powerful, interactive way to track financial KPIs, monitor product and country performance, analyze promotional impact, and evaluate cost trends — all powered by Looker’s modeling layer and visualization capabilities.
