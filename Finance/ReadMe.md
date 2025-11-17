@@ -1,4 +1,4 @@
-# Finance Analytics Dashboard (Looker)
+# Finance Analytics Dashboard
 
 This Looker dashboard provides a complete financial performance overview using LookML-powered explores, interactive filters, and drillable visualizations. It analyzes key financial metrics such as sales, profit, cost, pricing, product performance, country-level contribution, promotions, and time‑based trends. The dashboard enables finance teams to explore aggregated and granular insights efficiently using Looker’s semantic modeling layer.
 
